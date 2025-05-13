@@ -119,7 +119,7 @@ POST /api/appeals/cancel-all-in-progress
 1. Создание обращения:
 
 ```bash
-curl -X POST http://localhost:3000/api/appeals \
+curl -X POST http://localhost:4000/api/appeals \
   -H "Content-Type: application/json" \
   -d '{"topic": "Тестовое обращение", "text": "Это тестовое обращение"}'
 ```
@@ -127,13 +127,13 @@ curl -X POST http://localhost:3000/api/appeals \
 2. Взять обращение в работу (замените :id на полученный ID):
 
 ```bash
-curl -X PATCH http://localhost:3000/api/appeals/:id/take
+curl -X PATCH http://localhost:4000/api/appeals/:id/take
 ```
 
 3. Завершить обращение:
 
 ```bash
-curl -X PATCH http://localhost:3000/api/appeals/:id/complete \
+curl -X PATCH http://localhost:4000/api/appeals/:id/complete \
   -H "Content-Type: application/json" \
   -d '{"solution": "Тестовое решение"}'
 ```
@@ -141,7 +141,7 @@ curl -X PATCH http://localhost:3000/api/appeals/:id/complete \
 4. Получить список обращений:
 
 ```bash
-curl http://localhost:3000/api/appeals
+curl http://localhost:4000/api/appeals
 ```
 
 ## Статусы обращений
